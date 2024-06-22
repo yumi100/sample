@@ -25,3 +25,4 @@ Private Sub cmdRepCustomerList_Click()
     DoCmd.OpenReport "RepCustomerList", acViewPreview
     
 End Sub
+```
