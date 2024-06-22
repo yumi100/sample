@@ -12,7 +12,8 @@
 ![image](https://github.com/yumi100/sample/assets/116421936/c517d32a-739c-4e9a-95bb-dc6d65890ff8)  
 リレーションシップで繋いでいる箇所はルックアップフィールドになっている
 
-VBA集
+VBA集  
+TopMenu
 ```vb:cmdRepCustomerList.vb
 Option Compare Database
 
@@ -27,8 +28,13 @@ Private Sub cmdRepCustomerList_Click()
 End Sub
 ```
 
-```ruby:sushi.rb
-def sushi
-puts 'お寿司'
-end
+CustomerList
+```vb:cmdRepCustomerList.vb
+Option Compare Database
+
+Private Sub cmdDetailOpen_Click()
+    DoCmd.OpenForm "CustomerDetail", , , "ID=" & Me.ID
+    
+    Debug.Print "ID=" & Me.ID
+End Sub
 ```
