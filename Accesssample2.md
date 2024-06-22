@@ -67,7 +67,7 @@ Markdown形式に変換したい表を挿入する
 ![image](https://github.com/yumi100/sample/assets/116421936/dfa52b45-2134-4cc2-b0cd-fffcc944f576)
 クリップボードにコピー
 <br><br><br>
-参考までに[元データ](元データの画像accessこんな感じのデータが500件ほど続きます)のテーブルをMarkdown形式にしてみました。
+参考までに[元データ](#元データの画像accessこんな感じのデータが500件ほど続きます)のテーブルをMarkdown形式にしてみました。
 
 | ID  | customer_id | item_id             | order_date | 
 | --- | ----------- | ------------------- | ---------- | 
