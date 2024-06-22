@@ -26,3 +26,9 @@ Private Sub cmdRepCustomerList_Click()
     
 End Sub
 ```
+
+```ruby:sushi.rb
+def sushi
+puts 'お寿司'
+end
+```
