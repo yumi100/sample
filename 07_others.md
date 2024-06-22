@@ -2,10 +2,10 @@
 ![image](https://github.com/yumi100/sample/assets/116421936/5fb8756a-5d12-480a-b182-f3ecf6b51beb)
 ![image](https://github.com/yumi100/sample/assets/116421936/3fad5e52-7457-4dbd-b67b-fe3784fd52df)
 ![image](https://github.com/yumi100/sample/assets/116421936/21b2d66f-c807-498a-ba44-cd73a6fb7178)
-![image](https://github.com/yumi100/sample/assets/116421936/07b8de1f-89b7-4732-a7e4-f478c1baca6d)
+![image](https://github.com/yumi100/sample/assets/116421936/07b8de1f-89b7-4732-a7e4-f478c1baca6d)  
 一対多の一側に位置するフィールドは一度値を入れた後ルックアップを設定して表示を変えるのが望ましい  
 genderは男性、女性、その他・不明に限定するようテーブル、フォームを設定
-その他入力を限定したほうが良いと思った場合はその都度変えていく 
+その他入力を限定したほうが良いと思った場合はその都度変えていく  
 ![image](https://github.com/yumi100/sample/assets/116421936/526e5bdc-c695-4a3c-8ced-f7b50899d9ad)
 ![image](https://github.com/yumi100/sample/assets/116421936/46064a95-371c-4273-99a8-ba942235e44c)
 ![image](https://github.com/yumi100/sample/assets/116421936/fc2dfa05-0cd8-4434-9d3d-12c65450f0e1)
