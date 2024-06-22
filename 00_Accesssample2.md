@@ -581,7 +581,7 @@ Markdown形式に変換したい表を挿入する
 - [Excel一般機能：住所を分割する](https://chiquilin.web.fc2.com/data/050228_delimination_of_address.html)
 - [Excelで特定の文字列を削除する5つの方法](https://jp.indeed.com/career-advice/career-development/how-to-remove-specific-text-in-excel)
 - [ランダムツールXHCODE](https://www.xhcode.com/ja/#random)
-上のサイトは他にも有用なツールがあるっぽいです。
+このサイトは他にも有用なツールがあるっぽいです。
 - [NotePM](https://notepm.jp/markdown-table-tool)
 - [Canva](https://www.canva.com/)
 - [Qiita Markdownのページ内リンクの罠](https://qiita.com/hennin/items/7ee58dd7d7c013a23be7)
