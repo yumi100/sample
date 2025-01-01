@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wise FX Widget</title>
+    <style>
+        /* レスポンシブ対応: iframeが画面幅に合わせて調整される */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 155%; /* 高さを16:9比率に設定（570 / 370 * 100%） */
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <script>
+        // 1秒ごとにiframeをリロード
+        function reloadIframe() {
+            const iframe = document.getElementById("fx-iframe");
+            iframe.src = iframe.src; // srcを再設定してリロード
+        }
+        setInterval(reloadIframe, 1000); // 1秒間隔で更新
+    </script>
 </head>
 <body>
-    <iframe
-      title="fx"
-      src="https://wise.com/jp/currency-converter/fx-widget/converter?sourceCurrency=USD&targetCurrency=JPY"
-      height="280"
-      width="1200"
-      frameBorder="0"
-      allowtransparency="true">
-    </iframe>
+    <div class="iframe-container">
+        <iframe
+          id="fx-iframe"
+          title="fx"
+          src="https://wise.com/gb/currency-converter/fx-widget/chart?sourceCurrency=USD&targetCurrency=JPY"
+          allowtransparency="true">
+        </iframe>
+    </div>
 </body>
 </html>
+
 
