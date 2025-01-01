@@ -19,15 +19,16 @@
             height: 100%;
             border: none;
         }
-    </style>
-    <script>
-        // 1秒ごとにiframeをリロード
-        function reloadIframe() {
-            const iframe = document.getElementById("fx-iframe");
-            iframe.src = iframe.src; // srcを再設定してリロード
+        .controls {
+            margin-top: 10px;
+            text-align: center;
         }
-        setInterval(reloadIframe, 1000); // 1秒間隔で更新
-    </script>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="iframe-container">
@@ -38,7 +39,58 @@
           allowtransparency="true">
         </iframe>
     </div>
+    <div class="controls">
+        <button id="toggle-button">停止</button>
+    </div>
+
+    <script>
+        let intervalId = null; // リロード制御用
+        let isRunning = true; // 状態を保持
+
+        // リロード処理を実行する関数
+        function reloadIframe() {
+            const iframe = document.getElementById("fx-iframe");
+            iframe.src = iframe.src;
+        }
+
+        // リロードの開始
+        function startReloading() {
+            if (!intervalId) {
+                intervalId = setInterval(reloadIframe, 1000); // 1秒間隔で更新
+            }
+        }
+
+        // リロードの停止
+        function stopReloading() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        }
+
+        // ページ読み込み時にリロードを開始
+        startReloading();
+
+        // ボタンでリロードを制御
+        document.getElementById("toggle-button").addEventListener("click", function () {
+            if (isRunning) {
+                stopReloading();
+                this.textContent = "再開"; // ボタンのラベルを変更
+            } else {
+                startReloading();
+                this.textContent = "停止"; // ボタンのラベルを変更
+            }
+            isRunning = !isRunning; // 状態を反転
+        });
+
+        // タブが非アクティブ時にリロードを停止、アクティブ時に再開
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                stopReloading(); // タブが非アクティブなら停止
+            } else {
+                startReloading(); // タブがアクティブなら再開
+            }
+        });
+    </script>
 </body>
 </html>
-
-
